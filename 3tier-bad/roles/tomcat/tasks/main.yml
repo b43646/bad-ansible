@@ -38,4 +38,5 @@
   service:
     name: tomcat
     state: started
+  notify: start tomcat
 
