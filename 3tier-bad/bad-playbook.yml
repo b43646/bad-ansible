@@ -47,7 +47,7 @@
   become: true
   hosts: appdbs
   roles:
-    - postgre
+    - postgres
 
 - name: deploy apache
   hosts: apps
