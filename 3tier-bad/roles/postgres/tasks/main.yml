@@ -18,14 +18,14 @@
     name: postgresql-server
     state: latest
 
-  - name: enable apache at boot
-    systemd:
-      name: postgresql
-      enabled: yes
+- name: enable apache at boot
+  systemd:
+    name: postgresql
+    enabled: yes
   
-  - name: tell user to finish setting up postgres
-    debug:
-      msg: "Either uncomment the postgres setup or manually login and initialize"
+- name: tell user to finish setting up postgres
+  debug:
+    msg: "Either uncomment the postgres setup or manually login and initialize"
 
 - name: initilize postgres
   command: postgresql-setup initdb
