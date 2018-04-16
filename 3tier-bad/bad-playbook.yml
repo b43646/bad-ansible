@@ -32,7 +32,7 @@
   gather_facts: false
   become: true
   roles:
-    - tomcat
+    - { role: tomcat, tags: ['tomcat'] }
 
 - name: index.html on app
   hosts: apps
