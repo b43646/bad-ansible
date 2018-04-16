@@ -35,11 +35,11 @@
     - tomcat
 
 - name: index.html on app
-  hosts: app1,
+  hosts: apps
   gather_facts: false
   become: true
   roles:
-    - app
+    - { role: app, tags: ['app'] }
 
 - name: deploy postgres
   hosts: apps
