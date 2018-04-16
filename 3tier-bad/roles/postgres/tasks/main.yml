@@ -27,8 +27,9 @@
   debug:
     msg: "Either uncomment the postgres setup or manually login and initialize"
 
-- name: initilize postgres
-  command: postgresql-setup initdb
+# - name: initilize postgres
+#   command: postgresql-setup initdb
+  
 
 - name: initilize postgres some more
   command: chkconfig postgresql on
